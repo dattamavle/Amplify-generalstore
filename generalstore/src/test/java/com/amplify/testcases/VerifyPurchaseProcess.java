@@ -16,7 +16,7 @@ public class VerifyPurchaseProcess extends TestBase {
 	
 	StartShopingPage startShopingPage;
 	@Test
-	public void toverifyPurchaseProduct() throws MalformedURLException
+	public void toVerifyPurchaseProduct() throws MalformedURLException
 	{
 		initialisation();
 		startShopingPage=new StartShopingPage();
@@ -24,6 +24,12 @@ public class VerifyPurchaseProcess extends TestBase {
 		startShopingPage.getCountryListTab().click();
 		Helpers.scrolltoElement("Argentina");
 		Helpers.selectFromList(startShopingPage.getCountryList(), "Argentina");
+		Helpers.waitTillElementVisible(startShopingPage.getName(), "Name");
+		startShopingPage.getName().sendKeys("Hello");
+		startShopingPage.getSelectFemale().click();
+		startShopingPage.getLetsShopButton().click();
+		Helpers.scrolltoElement("Air Jordan 4 Retro");
+		
 	}
 
 }
