@@ -77,7 +77,7 @@ public class TestBase {
         
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);  
         
-        wait =new WebDriverWait(driver, 25);
+        wait =new WebDriverWait(driver, 30);
         
         js = (JavascriptExecutor) driver;
 		

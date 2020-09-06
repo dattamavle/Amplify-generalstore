@@ -5,7 +5,7 @@
     <classes>
       <class name="com.amplify.testcases.VerifyPurchaseProcess">
         <methods>
-          <include name="toverifyPurchaseProduct"/>
+          <include name="toVerifyPurchaseProduct"/>
         </methods>
       </class> <!-- com.amplify.testcases.VerifyPurchaseProcess -->
     </classes>

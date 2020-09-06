@@ -29,6 +29,20 @@ public class Helpers extends TestBase {
 
 	}
 
+	public static int getElementPositionFromList(List<AndroidElement> list, String name) {
+		int pos = 0;
+		for (int i = 0; i < list.size(); i++) {
+
+			if (list.get(i).getText().equalsIgnoreCase(name)) {
+				pos = i;
+				break;
+			} else {
+				continue;
+			}
+		}
+		return pos;
+	}
+
 	public static void waitTillElementClickable(AndroidElement element, String elementName) {
 		try {
 			wait.until(ExpectedConditions.elementToBeClickable(element));
